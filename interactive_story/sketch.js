@@ -39,7 +39,7 @@ function draw() {
     
     
     
-    //Character 1 eye colors
+    //Character 2 eye colors
     noStroke();
     fill(30);
     
@@ -49,16 +49,50 @@ function draw() {
     // Characater 2 right eye
     ellipse(630, 300, 30, 30);
     
-    //Character 1
+    //Character 2
     noStroke();
     fill(255, 255, 51);
     
     // Character 2 Head
     ellipse(600, 300, 60, 50);
     
-    // Characater 2 Body
+    // Characater 2 top Body 
     ellipse(600, 375, 100, 150);
     
     
     
+    //Character 2
+    noStroke();
+    fill(0);
+    
+    // Character 2 Head
+    ellipse(600, 300, 50, 40);
+    
+    // Characater 2 top Body 
+    ellipse(600, 375, 90, 140);
+    
+    
+    //Character 2 layer 2
+    noStroke();
+    fill(255, 255, 51);
+    
+    // Character 2 Head
+    ellipse(600, 300, 40, 30);
+    
+    // Characater 2 top Body 
+    ellipse(600, 375, 80, 130);
+    
+    
+    //Character 2 layer 3
+    noStroke();
+    fill(0);
+    
+    // Character 2 Head
+    ellipse(600, 300, 50, 40);
+    
+    // Characater 2 top Body 
+    ellipse(600, 375, 70, 120);
+    
+    
+  
 }
