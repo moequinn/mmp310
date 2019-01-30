@@ -1,5 +1,7 @@
 /*
+    mmp 310 week 1
     Interactive Story of Joe and Abel
+    By Moe Quinn
 */
 
 
@@ -83,7 +85,7 @@ function draw() {
     ellipse(600, 375, 80, 130);
     
     
-    //Character 2 layer 3
+  /*  //Character 2 layer 3
     noStroke();
     fill(0);
     
@@ -91,7 +93,7 @@ function draw() {
     ellipse(600, 300, 50, 40);
     
     // Characater 2 top Body 
-    ellipse(600, 375, 70, 120);
+    ellipse(600, 375, 70, 120); */
     
     
   
