@@ -9,7 +9,6 @@ function setup() {
     
     createCanvas(800, 500);
     textSize(40);
-    textAlign();
 
 }
 
@@ -31,6 +30,9 @@ function draw() {
     // Characater 1 
     ellipse(215, 275, 20, 20);  // right eye
     
+    //character 1
+    arc(200, 310, 200, 200, 100, PI + QUARTER_PI, PIE);  // wings
+    
     //Character 1 
     noStroke();
     fill(102, 178, 255);  // head and body color
@@ -41,6 +43,11 @@ function draw() {
     // Characater 1 
     ellipse(200, 375, 20, 200);  // Body
     
+    stroke(0);
+    fill(255);
+    
+    //character 1
+    arc(200, 310, 40, 40, 100, PI + QUARTER_PI, PIE);  // mouth
     
     
     //Character 2 
