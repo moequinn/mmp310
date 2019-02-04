@@ -160,7 +160,12 @@ function draw() {
     ellipse(600, 375, 70, 120);  // top Body
     
     
+    //Character 2 
+    noStroke(); 
+    fill(255);  // mouth color
     
+    //character 2
+    arc(600, 310, 20, 20, 100, PI + QUARTER_PI, PIE);  // mouth
     
     
     text('Meet Joe and Abel', 240, 120); //comments
