@@ -168,6 +168,10 @@ function draw() {
     arc(600, 310, 20, 20, 100, PI + QUARTER_PI, PIE);  // mouth
     
     
+    noStroke(); 
+    fill(0);  // text color
+    
+    
     text('Meet Joe and Abel', 240, 120); //comments
   
 }
