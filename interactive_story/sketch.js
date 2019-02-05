@@ -16,6 +16,8 @@ function draw() {
     
     background(204, 255, 229) // background color
     
+    
+    
     //Characater 1 on the left Joe
     //Characater 2 on the right Abel
     
@@ -41,7 +43,6 @@ function draw() {
     
     // Characater 1 
     ellipse(215, 275, 10, 10);  // right eye
-    
     
     
     //Character 1 
@@ -172,6 +173,42 @@ function draw() {
     fill(0);  // text color
     
     
-    text('Meet Joe and Abel', 240, 120); //comments
-  
+    text('Meet Joe and Abel', 240, 120); 
+    //comments
+    
+    
+    noStroke();
+    fill("green");  // grass
+    rect(0, 480, 800, 100);
+    
+    
+    noStroke();
+    fill("yellow");    // sun
+    ellipse(70, 80, 100, 100);
+    
+    noStroke();
+    fill("white");    // clound 1
+    ellipse(270, 180, 100, 100);
+    
+    noStroke();
+    fill("white");    // clound 1
+    ellipse(300, 180, 100, 80);
+    
+    noStroke();
+    fill("white");    // clound 1
+    ellipse(230, 180, 100, 100);
+    
+    
+    noStroke();
+    fill("white");    // clound 2
+    ellipse(570, 200, 100, 100);
+    
+    noStroke();
+    fill("white");    // clound 2
+    ellipse(600, 200, 100, 80);
+    
+    noStroke();
+    fill("white");    // clound 2
+    ellipse(530, 200, 100, 100);
+    
 }
