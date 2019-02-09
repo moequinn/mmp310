@@ -1,20 +1,41 @@
 /*
-    mmp 310 week 1 (01/27/2019)
+    mmp 310 week 2 (02/04/2019)
     Interactive Story of Joe and Abel
     By Moe Quinn
 */
 
 
+// setting: day, evenibg, night
+var currentSetting = "day";
+var bgColor = "lightblue";
+var sunX;
+var sunY = 100;
+var sunSize = 100;
+
 function setup() {
     
     createCanvas(800, 500);
     textSize(40);
+    //textAlign(CENTER, CENTER);
+    storyX = width / 2;
+    storyY = height - 50;
+    
+    sunX = width - 100;
 
 }
 
 function draw() {
     
     background(204, 255, 229) // background color
+    
+    // settings
+    background(bgColor);
+    
+    if (currentSetting == "day")
+        fill('gold');
+        noStroke();
+        ellipse(sunX, sunY, sunSize);
+    
     
     //Characater 1 on the left Joe
     //Characater 2 on the right Abel
