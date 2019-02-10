@@ -22,20 +22,6 @@ var sunY = 100;
 var sunW = 100;
 var sunH = 100;
 
-// story
-var story = "Meet Joe and Abel.";
-var storyX;
-var storyY;
-
-// settings: day, evening, night - lightblue, mediumslateblue, darkblue
-var currentSetting = "day";
-var joeWasClicked = false;
-var abelWasClicked = false;
-var bgColor = "lightblue";
-var sunX;
-var sunY = 100;
-var sunSize = 100;
-
 
 
 function setup() {
@@ -56,7 +42,25 @@ function draw() {
     background(204, 255, 229) // background color
     
     
+    // setting, morning, day, and night 
+    noStroke();
+
+	if (mouseIsPressed) {
+		// night scene 
+		background('darkblue');
+		fill(0);
+        
     
+    // Sun
+    noStroke();
+    fill("white");    // sun color
+    ellipse(sunX - 30, sunW + 20, sunW + 0, sunH + 0);
+	} else {
+		// day scene
+		background('lightblue');
+		fill('gold');
+		//ellipse(500, 100, 100);
+	}
     
     
     //Characater 1 on the left Joe
@@ -229,7 +233,7 @@ function draw() {
     
     // Grass
     noStroke();
-    fill("green");  // grass color
+    fill("lightgreen");  // grass color
     rect(0, 480, windowWidth, windowHeight);
     
     
@@ -264,6 +268,11 @@ function draw() {
     noStroke();
     fill("white");    // clound 2
     ellipse(530, 200, 100, 100);
+    
+    
+    
+    
+
     
     
     
