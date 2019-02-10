@@ -4,23 +4,56 @@
     By Moe Quinn
 */
 
+// global Variables
+var X = 200; // main X postion
+var Y = 200; // main Y postion
+var W = 200; // main Width
+var H = 200; // main Height
 
-// setting: day, evenibg, night
-var currentSetting = "day";
-var bgColor = "lightblue";
-var sunX;
-var sunY = 100;
-var sunSize = 100;
+
+/*
+// Character 1 Eye
+var joeEyeX = 15;  // - 15 left, + 15 right
+var joeEyeY = 75;  // - 75 left and right
+var joeEyeW = 180; // - 180 left and right
+var joeEyeH = 180; // - 180 left and right
+
+// Character 1 pupil
+var joeLPupil = 190; // - 190 left Pupil
+var joeRPupil = 190; // - 190 right Pupil
+
+// Cahracter 1 wings
+var wingsX = 8;     // - 8
+var wingsY = 110;   // + 110
+var wingsW = 100;   // + 100
+var wingsH = 180;   // - 180
+
+// Character 1 head
+var headX = 0;    // + 0
+var headY = 75;   // + 75
+var headW = 185;  // - 185
+var headH = 170;  // - 170
+
+// Character 1 body
+var bodyX = 0;    // + 0
+var bodyY = 175;  // + 175
+var bodyW = 180;  // - 180
+var bodyH = 0;    // + 0
+
+// Character 1 mouth
+var mouthX = 0;   // + 0
+var mouthY = 110; // + 110
+var mouthW = 160; // - 160
+var mouthH = 160; // - 160
+
+
+*/
+
 
 function setup() {
     
     createCanvas(800, 500);
     textSize(40);
-    //textAlign(CENTER, CENTER);
-    storyX = width / 2;
-    storyY = height - 50;
-    
-    sunX = width - 100;
 
 }
 
@@ -28,13 +61,6 @@ function draw() {
     
     background(204, 255, 229) // background color
     
-    // settings
-    background(bgColor);
-    
-    if (currentSetting == "day")
-        fill('gold');
-        noStroke();
-        ellipse(sunX, sunY, sunSize);
     
     
     //Characater 1 on the left Joe
@@ -46,10 +72,10 @@ function draw() {
     fill(255);  // eye colors
     
     // Characater 1 
-    ellipse(185, 275, 20, 20);  // Outter left eye
+    ellipse(X - 15, Y + 75, W - 180, H - 180);  // Outter left eye
     
     // Characater 1 
-    ellipse(215, 275, 20, 20);  // Outter right eye
+    ellipse(X + 15, Y + 75, W - 180, H - 180);  // Outter right eye
     
     
     
@@ -58,11 +84,10 @@ function draw() {
     fill(0);  // eye colors
     
     // Characater 1 
-    ellipse(185, 275, 10, 10);  // left eye
+    ellipse(X - 15, Y + 75, W - 190, H - 190);  // left eye
     
     // Characater 1 
-    ellipse(215, 275, 10, 10);  // right eye
-    
+    ellipse(X + 15, Y + 75, W - 190, H - 190);  // right eye
     
     
     //Character 1 
@@ -70,10 +95,10 @@ function draw() {
     fill(190);  // wings color   
     
     //character 1
-    arc(192, 310, 300, 20, 100, PI + HALF_PI, PIE);  // top wings  
+    arc(X - 8, Y + 110, W + 100, H -180, 100, PI + HALF_PI, PIE);  // top wings  
     
     //character 1
-    arc(192, 340, 300, 20, 100, PI + HALF_PI, PIE);  // bottom wings
+    arc(X - 8, Y + 140, W + 100, H - 180, 100, PI + HALF_PI, PIE);  // bottom wings
     
     
     
@@ -94,6 +119,9 @@ function draw() {
     
     //character 1
     arc(200, 310, 40, 40, 100, PI + QUARTER_PI, PIE);  // mouth
+    
+    
+    // end of character 1
     
     
     
@@ -188,11 +216,71 @@ function draw() {
     //character 2
     arc(600, 310, 20, 20, 100, PI + QUARTER_PI, PIE);  // mouth
     
+    // end of character 2
+    
+    
+    
     
     noStroke(); 
     fill(0);  // text color
     
+    text('Meet Joe and Abel', 240, 120); 
+    //comments
     
-    text('Meet Joe and Abel', 240, 120); //comments
-  
+    
+    
+    noStroke();
+    fill("green");  // grass
+    rect(0, 480, 800, 100);
+    
+    
+    noStroke();
+    fill("yellow");    // sun
+    ellipse(70, 80, 100, 100);
+    
+    noStroke();
+    fill("white");    // clound 1
+    ellipse(270, 180, 100, 100);
+    
+    noStroke();
+    fill("white");    // clound 1
+    ellipse(300, 180, 100, 80);
+    
+    noStroke();
+    fill("white");    // clound 1
+    ellipse(230, 180, 100, 100);
+    
+    
+    noStroke();
+    fill("white");    // clound 2
+    ellipse(570, 200, 100, 100);
+    
+    noStroke();
+    fill("white");    // clound 2
+    ellipse(600, 200, 100, 80);
+    
+    noStroke();
+    fill("white");    // clound 2
+    ellipse(530, 200, 100, 100);
+    
+    
+    
+    /*
+    // setting, morning, day, and night 
+    noStroke();
+
+	if (mouseIsPressed) {
+		// night scene 
+		background('darkblue');
+		fill('plum');
+		ellipse(100, 100, 50);
+	} else {
+		// day scene
+		background('lightblue');
+		fill('gold');
+		ellipse(500, 100, 100);
+	}
+    
+    */
+    
 }
