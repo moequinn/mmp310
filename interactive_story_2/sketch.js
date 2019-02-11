@@ -15,12 +15,14 @@ var cloudX = 100;
 var cloudY = 100;
 var cloudW = 100;
 var cloudH = 100;
+//var clouudSize = 100;
 
 // sun
 var sunX = 100;
 var sunY = 100;
 var sunW = 100;
 var sunH = 100;
+//var sunSize = 100;
 
 
 
@@ -224,7 +226,7 @@ function draw() {
     noStroke(); 
     fill(0);  // text color
     
-    text('Meet Joe and Abel', 240, 110); 
+    text('Meet Joe and Abel', X + 200, Y - 110); 
     //comments
     
     
@@ -234,7 +236,7 @@ function draw() {
     // Grass
     noStroke();
     fill("lightgreen");  // grass color
-    rect(0, 480, windowWidth, windowHeight);
+    rect(X - 200, Y + 280, windowWidth, windowHeight);
     
     
     // Sun
@@ -245,29 +247,29 @@ function draw() {
     // Cloud 1
     noStroke();
     fill("white");    // clound 1
-    ellipse(270, 180, 100, 100);
+    ellipse(cloudX + 170, cloudY + 80, cloudW + 0, cloudH + 0);
     
     noStroke();
     fill("white");    // clound 1
-    ellipse(300, 180, 100, 80);
+    ellipse(cloudX + 200, cloudY + 80, cloudW + 0, cloudH - 20);
     
     noStroke();
     fill("white");    // clound 1
-    ellipse(230, 180, 100, 100);
+    ellipse(cloudX + 130, cloudY + 80, cloudW + 0, cloudH + 0);
     
     
     // Cloud 2
     noStroke();
     fill("white");    // clound 2
-    ellipse(570, 200, 100, 100);
+    ellipse(cloudX + 470, cloudY + 100, cloudW + 0, cloudH + 0);
     
     noStroke();
     fill("white");    // clound 2
-    ellipse(600, 200, 100, 80);
+    ellipse(cloudX + 500, cloudY + 100, cloudW - 0, cloudH - 20);
     
     noStroke();
     fill("white");    // clound 2
-    ellipse(530, 200, 100, 100);
+    ellipse(cloudX + 430, cloudY + 100, cloudW + 0, cloudH + 0);
     
     
     
