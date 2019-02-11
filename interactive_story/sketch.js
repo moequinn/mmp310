@@ -10,45 +10,15 @@ var Y = 200; // main Y postion
 var W = 200; // main Width
 var H = 200; // main Height
 
-// clouds
-var cloudX = 100;
-var cloudY = 100;
-var cloudW = 100;
-var cloudH = 100;
-
-// sun
-var sunX = 100;
-var sunY = 100;
-var sunW = 100;
-var sunH = 100;
-
 
 function setup() {
     
     createCanvas(windowWidth, windowHeight);
 	textSize(40);
 	textAlign(CENTER, CENTER);
-	storyX = width / 2;
-	storyY = height - 50;
-	
-	sunX = width - 100;
-
 
 }
 
-
-
-function setup() {
-    
-    createCanvas(windowWidth, windowHeight);
-	textSize(40);
-	textAlign(CENTER, CENTER);
-	storyX = width / 2;
-	storyY = height - 50;
-	
-	sunX = width - 100;
-
-}
 
 function draw() {
     
@@ -210,57 +180,13 @@ function draw() {
     arc(X + 400, Y + 110, W - 180, H - 180, 100, PI + QUARTER_PI, PIE);  // mouth
     
     // end of character 2
-    
-    
-    
+     
     
     noStroke(); 
     fill(0);  // text color
     
     text('Meet Joe and Abel', 240, 110); 
     //comments
-    
-    
-
-    
-    
-    // Grass
-    noStroke();
-    fill("lightgreen");  // grass color
-    rect(0, 480, windowWidth, windowHeight);
-    
-    
-    // Sun
-    noStroke();
-    fill("yellow");    // sun color
-    ellipse(sunX - 30, sunW - 20, sunW + 0, sunH + 0);
-    
-    // Cloud 1
-    noStroke();
-    fill("white");    // clound 1
-    ellipse(270, 180, 100, 100);
-    
-    noStroke();
-    fill("white");    // clound 1
-    ellipse(300, 180, 100, 80);
-    
-    noStroke();
-    fill("white");    // clound 1
-    ellipse(230, 180, 100, 100);
-    
-    
-    // Cloud 2
-    noStroke();
-    fill("white");    // clound 2
-    ellipse(570, 200, 100, 100);
-    
-    noStroke();
-    fill("white");    // clound 2
-    ellipse(600, 200, 100, 80);
-    
-    noStroke();
-    fill("white");    // clound 2
-    ellipse(530, 200, 100, 100);
     
     
 }
