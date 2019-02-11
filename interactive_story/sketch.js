@@ -4,11 +4,49 @@
     By Moe Quinn
 */
 
+// global Variables
+var X = 200; // main X postion
+var Y = 200; // main Y postion
+var W = 200; // main Width
+var H = 200; // main Height
+
+// clouds
+var cloudX = 100;
+var cloudY = 100;
+var cloudW = 100;
+var cloudH = 100;
+
+// sun
+var sunX = 100;
+var sunY = 100;
+var sunW = 100;
+var sunH = 100;
+
 
 function setup() {
     
-    createCanvas(800, 500);
-    textSize(40);
+    createCanvas(windowWidth, windowHeight);
+	textSize(40);
+	textAlign(CENTER, CENTER);
+	storyX = width / 2;
+	storyY = height - 50;
+	
+	sunX = width - 100;
+
+
+}
+
+
+
+function setup() {
+    
+    createCanvas(windowWidth, windowHeight);
+	textSize(40);
+	textAlign(CENTER, CENTER);
+	storyX = width / 2;
+	storyY = height - 50;
+	
+	sunX = width - 100;
 
 }
 
@@ -27,10 +65,10 @@ function draw() {
     fill(255);  // eye colors
     
     // Characater 1 
-    ellipse(185, 275, 20, 20);  // Outter left eye
+    ellipse(X - 15, Y + 75, W - 180, H - 180);  // Outter left eye
     
     // Characater 1 
-    ellipse(215, 275, 20, 20);  // Outter right eye
+    ellipse(X + 15, Y + 75, W - 180, H - 180);  // Outter right eye
     
     
     
@@ -39,10 +77,10 @@ function draw() {
     fill(0);  // eye colors
     
     // Characater 1 
-    ellipse(185, 275, 10, 10);  // left eye
+    ellipse(X - 15, Y + 75, W - 190, H - 190);  // left eye
     
     // Characater 1 
-    ellipse(215, 275, 10, 10);  // right eye
+    ellipse(X + 15, Y + 75, W - 190, H - 190);  // right eye
     
     
     //Character 1 
@@ -50,10 +88,10 @@ function draw() {
     fill(190);  // wings color   
     
     //character 1
-    arc(192, 310, 300, 20, 100, PI + HALF_PI, PIE);  // top wings  
+    arc(X - 8, Y + 110, W + 100, H -180, 100, PI + HALF_PI, PIE);  // top wings  
     
     //character 1
-    arc(192, 340, 300, 20, 100, PI + HALF_PI, PIE);  // bottom wings
+    arc(X - 8, Y + 140, W + 100, H - 180, 100, PI + HALF_PI, PIE);  // bottom wings
     
     
     
@@ -62,10 +100,10 @@ function draw() {
     fill(102, 178, 255);  // head and body color
     
     // Characater 1 
-    ellipse(200, 275, 15, 30);  // head
+    ellipse(X, Y + 75, W - 185, H - 170);  // head
     
     // Characater 1 
-    ellipse(200, 375, 20, 200);  // Body
+    ellipse(X, Y + 175, W - 180, H);  // Body
     
     
     
@@ -73,7 +111,10 @@ function draw() {
     fill(255);
     
     //character 1
-    arc(200, 310, 40, 40, 100, PI + QUARTER_PI, PIE);  // mouth
+    arc(X, Y + 110, W - 160, H - 160, 100, PI + QUARTER_PI, PIE);  // mouth
+    
+    
+    // end of character 1
     
     
     
@@ -83,10 +124,10 @@ function draw() {
     fill(255);  // outter eye colors
     
     // Character 2 
-    ellipse(570, 300, 30, 30);  // outter left eye
+    ellipse(X + 370, Y + 100, W - 170,  H -170);  // outter left eye
     
     // Characater 2 
-    ellipse(630, 300, 30, 30);  // outter right eye
+    ellipse(X + 430, Y + 100, W - 170, H - 170);  // outter right eye
     
     
     //Character 2 
@@ -94,10 +135,10 @@ function draw() {
     fill(30);  // eye colors
     
     // Character 2 
-    ellipse(570, 300, 20, 20);  // left eye
+    ellipse(X + 370, Y + 100, W - 180, H - 180);  // left eye
     
     // Characater 2 
-    ellipse(630, 300, 20, 20);  // right eye
+    ellipse(X + 430, Y + 100, W - 180, H - 180);  // right eye
     
     
     
@@ -108,10 +149,10 @@ function draw() {
        
     
     //character 2
-    arc(595, 345, 250, 50, 100, PI + HALF_PI, PIE);  // top wings 
+    arc(X + 395, Y + 145, W + 50, H - 150, 100, PI + HALF_PI, PIE);  // top wings 
     
     //character 2
-    arc(595, 375, 240, 40, 100, PI + HALF_PI, PIE);  // bottom wings
+    arc(X + 395, Y + 175, W + 50, H - 150, 100, PI + HALF_PI, PIE);  // bottom wings
     
     
     //Character 2
@@ -119,10 +160,10 @@ function draw() {
     fill(255, 255, 51);
     
     // Character 2 
-    ellipse(600, 300, 60, 50);  // head
+    ellipse(X + 400, Y + 100, W - 140, H - 150);  // head
     
     // Characater 2  
-    ellipse(600, 375, 100, 150);  // top Body
+    ellipse(X + 400, Y + 175, W - 100, H - 50);  // top Body
     
     
     
@@ -131,10 +172,10 @@ function draw() {
     fill(0);
     
     // Character 2 
-    ellipse(600, 300, 50, 40); // head
+    ellipse(X + 400, Y + 100, W - 150, H - 160); // head
     
     // Characater 2  
-    ellipse(600, 375, 90, 140); // top Body
+    ellipse(X + 400, Y + 175, W - 110, H - 60); // top Body
     
     
     
@@ -143,10 +184,10 @@ function draw() {
     fill(255, 255, 51); // layer 2
     
     // Character 2 
-    ellipse(600, 300, 40, 30); // head
+    ellipse(X + 400, Y + 100, W - 160, H - 170); // head
     
     // Characater 2  
-    ellipse(600, 375, 80, 130); // top Body
+    ellipse(X + 400, Y + 175, W - 120, H - 70); // top Body
     
     
     
@@ -155,10 +196,10 @@ function draw() {
     fill(0);  // layer 3
     
     // Character 2 
-    ellipse(600, 300, 50, 40); // head
+    ellipse(X + 400, Y + 100, W - 150, H - 160); // head
     
     // Characater 2 
-    ellipse(600, 375, 70, 120);  // top Body
+    ellipse(X + 400, Y + 175, W - 130, H - 80);  // top Body
     
     
     //Character 2 
@@ -166,27 +207,35 @@ function draw() {
     fill(255);  // mouth color
     
     //character 2
-    arc(600, 310, 20, 20, 100, PI + QUARTER_PI, PIE);  // mouth
+    arc(X + 400, Y + 110, W - 180, H - 180, 100, PI + QUARTER_PI, PIE);  // mouth
+    
+    // end of character 2
+    
     
     
     
     noStroke(); 
     fill(0);  // text color
     
-    text('Meet Joe and Abel', 240, 120); 
+    text('Meet Joe and Abel', 240, 110); 
     //comments
     
     
+
     
+    
+    // Grass
     noStroke();
-    fill("green");  // grass
-    rect(0, 480, 800, 100);
+    fill("lightgreen");  // grass color
+    rect(0, 480, windowWidth, windowHeight);
     
     
+    // Sun
     noStroke();
-    fill("yellow");    // sun
-    ellipse(70, 80, 100, 100);
+    fill("yellow");    // sun color
+    ellipse(sunX - 30, sunW - 20, sunW + 0, sunH + 0);
     
+    // Cloud 1
     noStroke();
     fill("white");    // clound 1
     ellipse(270, 180, 100, 100);
@@ -200,6 +249,7 @@ function draw() {
     ellipse(230, 180, 100, 100);
     
     
+    // Cloud 2
     noStroke();
     fill("white");    // clound 2
     ellipse(570, 200, 100, 100);
@@ -211,5 +261,6 @@ function draw() {
     noStroke();
     fill("white");    // clound 2
     ellipse(530, 200, 100, 100);
+    
     
 }
