@@ -1,6 +1,6 @@
 /*
 	mmp 310 week 3
-	interactive story
+	interactive story 3
 	plot sketch, adding functions
 */
 
