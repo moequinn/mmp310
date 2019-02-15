@@ -1,8 +1,10 @@
 /*
-    mmp 310 week 2 (02/04/2019)
-    Interactive Story of Joe and Abel
+	mmp 310 week 2 (02/04/2019)
+    Interactive Story of Joe and Abel Setting
     By Moe Quinn
+
 */
+
 
 // global Variables
 var X = 200; // main X postion
@@ -25,108 +27,110 @@ var sunH = 100;
 //var sunSize = 100;
 
 
+// global variables
+var chapter = "morning"; // day, night
+var whichFruit;
 
 function setup() {
-    
-    createCanvas(windowWidth, windowHeight);
-	textSize(40);
+	createCanvas(windowWidth, windowHeight);
 	textAlign(CENTER, CENTER);
-	storyX = width / 2;
-	storyY = height - 50;
-	
-	sunX = width - 100;
-
-
+	textFont('Hanalei Fill');
 }
 
 function draw() {
-    
-    background(204, 255, 229) // background color
-    
-    
-    // setting, morning, day, and night 
-    noStroke();
-
-	if (mouseIsPressed) {
-		// night scene 
-		background('darkblue');
-		fill(0);
-        
-    
-    // Sun
-    noStroke();
-    fill("white");    // sun color
-    ellipse(sunX - 30, sunW + 20, sunW + 0, sunH + 0);
-	} else {
-		// day scene
-		background('lightblue');
+	background(200);
+	
+	if (chapter == "morning") {
+        background('orange');
 		fill('gold');
-		//ellipse(500, 100, 100);
+        noStroke();
+		ellipse(500, 100, 100);
+        
+        // Grass
+        noStroke();
+        fill("lightgreen");  // grass color
+        rect(X - 200, Y + 280, windowWidth, windowHeight);
+        
+		abel(100, 200, 200);  // first character
+		banana(200, 100, 200); // second character
+        
+        
+		narrative("Meet Joe and Abel.", "Click anywhere to continue.");
+	} else if (chapter == "day") {
+        background('lightblue');
+		fill('gold');
+        noStroke();
+		ellipse(800, 100, 100);
+        
+        // Grass
+        noStroke();
+        fill("lightgreen");  // grass color
+        rect(X - 200, Y + 280, windowWidth, windowHeight);
+        
+		abel(300, 150, 200);  
+		banana(400, 75, 200);
+		narrative("Then the user ate one of them.", "Click on one of the characters to eat it.");
+	} else if (chapter == "night") {
+		if (whichFruit == "banana") {
+            background('darkblue');
+            
+            // Moon
+            noStroke();
+            fill("white");    // Moon color
+            ellipse(sunX - 30, sunW + 20, sunW + 0, sunH + 0);
+            
+            // Grass
+        noStroke();
+        fill("lightgreen");  // grass color
+        rect(X - 200, Y + 280, windowWidth, windowHeight);
+            
+			abel(600, 100, 200);
+			narrative("Abel is Stuff.", "Click anywhere to start over.");
+		}
+		if (whichFruit == "abel") {
+            background('darkblue');
+            
+            // Moon
+            noStroke();
+            fill("white");    // Moon color
+            ellipse(sunX - 30, sunW + 20, sunW + 0, sunH + 0);
+            
+            // Grass
+        noStroke();
+        fill("lightgreen");  // grass color
+        rect(X - 200, Y + 280, windowWidth, windowHeight);
+			
+			banana(700, 50, 200 - 150);
+			narrative("Joel is Stuff.", "Click anywhere to start over.");
+		}
 	}
-    
-    
-    //Characater 1 on the left Joe
-    //Characater 2 on the right Abel
-    
-    
-    //Character 1 
-    noStroke();
-    fill(255);  // eye colors
-    
-    // Characater 1 
-    ellipse(X - 15, Y + 75, W - 180, H - 180);  // Outter left eye
-    
-    // Characater 1 
-    ellipse(X + 15, Y + 75, W - 180, H - 180);  // Outter right eye
-    
-    
-    
-    //Character 1 
-    noStroke();
-    fill(0);  // eye colors
-    
-    // Characater 1 
-    ellipse(X - 15, Y + 75, W - 190, H - 190);  // left eye
-    
-    // Characater 1 
-    ellipse(X + 15, Y + 75, W - 190, H - 190);  // right eye
-    
-    
-    //Character 1 
-    noStroke();
-    fill(190);  // wings color   
-    
-    //character 1
-    arc(X - 8, Y + 110, W + 100, H -180, 100, PI + HALF_PI, PIE);  // top wings  
-    
-    //character 1
-    arc(X - 8, Y + 140, W + 100, H - 180, 100, PI + HALF_PI, PIE);  // bottom wings
-    
-    
-    
-    //Character 1 
-    noStroke();
-    fill(102, 178, 255);  // head and body color
-    
-    // Characater 1 
-    ellipse(X, Y + 75, W - 185, H - 170);  // head
-    
-    // Characater 1 
-    ellipse(X, Y + 175, W - 180, H);  // Body
-    
-    
-    
-    stroke(0);
-    fill(255);
-    
-    //character 1
-    arc(X, Y + 110, W - 160, H - 160, 100, PI + QUARTER_PI, PIE);  // mouth
-    
-    
-    // end of character 1
-    
-    
-    
+}
+
+function mouseClicked() {
+	// change chapter
+	if (chapter == "morning") chapter = "day";
+//	else if (chapter == "day") chapter = "night";
+	else if (chapter == "night") chapter = "morning";
+	
+	// detect which character is clicked
+	else if (chapter == "day") {
+		// clicked abel
+		var abelDist = dist(mouseX, mouseY, 300, 200);
+		if (abelDist < 150 / 2) {
+			whichFruit = "abel";
+			chapter = "night";
+		}
+		// clicked banana
+		var bananaDist = dist(mouseX, mouseY, 400, 100);
+		if (bananaDist < 75 / 2) {
+			whichFruit = "banana";
+			chapter = "night";
+		}
+	}
+}
+
+function abel(x, s, o) {
+	var eyeSize = s / 10;
     
     //Character 2 
     noStroke();
@@ -148,14 +152,6 @@ function draw() {
     
     // Characater 2 
     ellipse(X + 430, Y + 100, W - 180, H - 180);  // right eye
-    
-    
-    
-    //Character 2 
-    noStroke();
-    fill(190);  // wings color
-    
-       
     
     //character 2
     arc(X + 395, Y + 145, W + 50, H - 150, 100, PI + HALF_PI, PIE);  // top wings 
@@ -219,81 +215,76 @@ function draw() {
     arc(X + 400, Y + 110, W - 180, H - 180, 100, PI + QUARTER_PI, PIE);  // mouth
     
     // end of character 2
-    
-    
-    
-    
-    noStroke(); 
-    fill(0);  // text color
-    
-    text('Meet Joe and Abel', X + 200, Y - 110); 
-    //comments
-    
-    
 
-    
-    
-    // Grass
-    noStroke();
-    fill("lightgreen");  // grass color
-    rect(X - 200, Y + 280, windowWidth, windowHeight);
-    
-    
-    // Sun
-    noStroke();
-    fill("yellow");    // sun color
-    ellipse(sunX - 30, sunW - 20, sunW + 0, sunH + 0);
-    
-    // Cloud 1
-    noStroke();
-    fill("white");    // clound 1
-    ellipse(cloudX + 170, cloudY + 80, cloudW + 0, cloudH + 0);
-    
-    noStroke();
-    fill("white");    // clound 1
-    ellipse(cloudX + 200, cloudY + 80, cloudW + 0, cloudH - 20);
-    
-    noStroke();
-    fill("white");    // clound 1
-    ellipse(cloudX + 130, cloudY + 80, cloudW + 0, cloudH + 0);
-    
-    
-    // Cloud 2
-    noStroke();
-    fill("white");    // clound 2
-    ellipse(cloudX + 470, cloudY + 100, cloudW + 0, cloudH + 0);
-    
-    noStroke();
-    fill("white");    // clound 2
-    ellipse(cloudX + 500, cloudY + 100, cloudW - 0, cloudH - 20);
-    
-    noStroke();
-    fill("white");    // clound 2
-    ellipse(cloudX + 430, cloudY + 100, cloudW + 0, cloudH + 0);
-    
-    
-    
-    
+}
 
+function banana(x, s, o) {
     
-    
-    
-    /*
-    // setting, morning, day, and night 
+    //Character 1 
     noStroke();
-
-	if (mouseIsPressed) {
-		// night scene 
-		background('darkblue');
-		fill('plum');
-		ellipse(100, 100, 50);
-	} else {
-		// day scene
-		background('lightblue');
-		fill('gold');
-		ellipse(500, 100, 100);
-	}
+    fill(255);  // eye colors
     
-    */
+    // Characater 1 
+    ellipse(X - 15, Y + 75, W - 180, H - 180);  // Outter left eye
+    
+    // Characater 1 
+    ellipse(X + 15, Y + 75, W - 180, H - 180);  // Outter right eye
+    
+    
+    
+    //Character 1 
+    noStroke();
+    fill(0);  // eye colors
+    
+    // Characater 1 
+    ellipse(X - 15, Y + 75, W - 190, H - 190);  // left eye
+    
+    // Characater 1 
+    ellipse(X + 15, Y + 75, W - 190, H - 190);  // right eye
+    
+    
+    //Character 1 
+    noStroke();
+    fill(190);  // wings color   
+    
+    //character 1
+    arc(X - 8, Y + 110, W + 100, H -180, 100, PI + HALF_PI, PIE);  // top wings  
+    
+    //character 1
+    arc(X - 8, Y + 140, W + 100, H - 180, 100, PI + HALF_PI, PIE);  // bottom wings
+    
+    
+    
+    //Character 1 
+    noStroke();
+    fill(102, 178, 255);  // head and body color
+    
+    // Characater 1 
+    ellipse(X, Y + 75, W - 185, H - 170);  // head
+    
+    // Characater 1 
+    ellipse(X, Y + 175, W - 180, H);  // Body
+    
+    
+    
+    stroke(0);
+    fill(255);
+    
+    //character 1
+    arc(X, Y + 110, W - 160, H - 160, 100, PI + QUARTER_PI, PIE);  // mouth
+    
+    
+    // end of character 1
+    
+}
+
+function narrative(story, instructions) {
+	// narrative
+	stroke(255);
+	textSize(30);
+	text(story, width / 2, height - 100);
+	// instructions
+	textSize(20);
+	text(instructions, width / 2, height - 50);
     
 }
