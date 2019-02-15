@@ -52,7 +52,7 @@ function draw() {
         rect(X - 200, Y + 280, windowWidth, windowHeight);
         
 		abel(100, 200, 200);  // first character
-		banana(200, 100, 200); // second character
+		joel(200, 100, 200); // second character
         
         
 		narrative("Meet Joe and Abel.", "Click anywhere to continue.");
@@ -68,10 +68,10 @@ function draw() {
         rect(X - 200, Y + 280, windowWidth, windowHeight);
         
 		abel(300, 150, 200);  
-		banana(400, 75, 200);
+		joel(400, 75, 200);
 		narrative("Then the user ate one of them.", "Click on one of the characters to eat it.");
 	} else if (chapter == "night") {
-		if (whichFruit == "banana") {
+		if (whichFruit == "joel") {
             background('darkblue');
             
             // Moon
@@ -100,7 +100,7 @@ function draw() {
         fill("lightgreen");  // grass color
         rect(X - 200, Y + 280, windowWidth, windowHeight);
 			
-			banana(700, 50, 200 - 150);
+			joel(700, 50, 200 - 150);
 			narrative("Joel is Stuff.", "Click anywhere to start over.");
 		}
 	}
@@ -116,14 +116,14 @@ function mouseClicked() {
 	else if (chapter == "day") {
 		// clicked abel
 		var abelDist = dist(mouseX, mouseY, 300, 200);
-		if (abelDist < 150 / 2) {
+		if (abelDist < 150) {
 			whichFruit = "abel";
 			chapter = "night";
 		}
-		// clicked banana
-		var bananaDist = dist(mouseX, mouseY, 400, 100);
-		if (bananaDist < 75 / 2) {
-			whichFruit = "banana";
+		// clicked joel
+		var joelDist = dist(mouseX, mouseY, 400, 100);
+		if (joelDist < 280) {
+			whichFruit = "joel";
 			chapter = "night";
 		}
 	}
@@ -218,7 +218,7 @@ function abel(x, s, o) {
 
 }
 
-function banana(x, s, o) {
+function joel(x, s, o) {
     
     //Character 1 
     noStroke();
