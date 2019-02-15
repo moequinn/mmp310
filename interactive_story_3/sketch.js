@@ -50,7 +50,7 @@ function draw() {
         fill("lightgreen");  // grass color
         rect(X - 200, Y + 280, windowWidth, windowHeight);
         
-		abel(100, 200, 200);  // first character
+		abel(800, 200, 200);  // first character
 		joel(200, 100, 200); // second character
         
         
@@ -66,8 +66,8 @@ function draw() {
         fill("lightgreen");  // grass color
         rect(X - 200, Y + 280, windowWidth, windowHeight);
         
-		abel(300, 150, 200);  
-		joel(400, 75, 200);
+		abel(600, 150, 200);  
+		joel(300, 75, 200);
 		narrative("Then the user ate one of them.", "Click on one of the characters to eat it.");
 	} else if (chapter == "night") {
 		if (whichFruit == "joel") {
@@ -83,7 +83,7 @@ function draw() {
         fill("lightgreen");  // grass color
         rect(X - 200, Y + 280, windowWidth, windowHeight);
             
-			abel(600, 100, 200);
+			abel(600, 100, 300);
 			narrative("Abel is Stuff.", "Click anywhere to start over.");
 		}
 		if (whichFruit == "abel") {
@@ -99,7 +99,7 @@ function draw() {
         fill("lightgreen");  // grass color
         rect(X - 200, Y + 280, windowWidth, windowHeight);
 			
-			joel(700, 50, 200 - 150);
+			joel(600, 50, 200 - 150);
 			narrative("Joel is Stuff.", "Click anywhere to start over.");
 		}
 	}
@@ -115,14 +115,14 @@ function mouseClicked() {
 	else if (chapter == "day") {
 		// clicked abel
 		var abelDist = dist(mouseX, mouseY, 300, 200);
-		if (abelDist < 150) {
+		if (abelDist < 150 / 2) {
 			whichFruit = "abel";
 			chapter = "night";
 		}
 		// clicked joel
 		var joelDist = dist(mouseX, mouseY, 400, 100);
-		if (joelDist < 280) {
-			whichFruit = "banana";
+		if (joelDist < 260 / 2) {
+			whichFruit = "joel";
 			chapter = "night";
 		}
 	}
@@ -167,7 +167,7 @@ function abel(x, s, o) {
     ellipse(x + 400, Y + 100, W - 140, H - 150);  // head
     
     // Characater 2  
-    ellipse(x + 400, Y + 175, W - 100, H - 50);  // top Body
+    ellipse(x + 400, Y + 175, o - 100, H - 50);  // top Body
     
     
     
@@ -179,7 +179,7 @@ function abel(x, s, o) {
     ellipse(x + 400, Y + 100, W - 150, H - 160); // head
     
     // Characater 2  
-    ellipse(x + 400, Y + 175, W - 110, H - 60); // top Body
+    ellipse(x + 400, Y + 175, o - 110, H - 60); // top Body
     
     
     
@@ -191,7 +191,7 @@ function abel(x, s, o) {
     ellipse(x + 400, Y + 100, W - 160, H - 170); // head
     
     // Characater 2  
-    ellipse(x + 400, Y + 175, W - 120, H - 70); // top Body
+    ellipse(x + 400, Y + 175, o - 120, H - 70); // top Body
     
     
     
@@ -203,7 +203,7 @@ function abel(x, s, o) {
     ellipse(x + 400, Y + 100, W - 150, H - 160); // head
     
     // Characater 2 
-    ellipse(x + 400, Y + 175, W - 130, H - 80);  // top Body
+    ellipse(x + 400, Y + 175, o - 130, H - 80);  // top Body
     
     
     //Character 2 
