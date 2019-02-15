@@ -83,7 +83,7 @@ function draw() {
         fill("lightgreen");  // grass color
         rect(X - 200, Y + 280, windowWidth, windowHeight);
             
-			abel(600, 100, 300);
+			abel(300, 100, 300);
 			narrative("Abel is Stuff.", "Click anywhere to start over.");
 		}
 		if (whichFruit == "abel") {
@@ -115,7 +115,7 @@ function mouseClicked() {
 	else if (chapter == "day") {
 		// clicked abel
 		var abelDist = dist(mouseX, mouseY, 300, 200);
-		if (abelDist < 150 / 2) {
+		if (abelDist < 800) {
 			whichFruit = "abel";
 			chapter = "night";
 		}
