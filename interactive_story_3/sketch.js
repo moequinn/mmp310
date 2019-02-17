@@ -11,13 +11,6 @@ var Y = 200; // main Y postion
 var W = 200; // main Width
 var H = 200; // main Height
 
-// clouds
-var cloudX = 100;
-var cloudY = 100;
-var cloudW = 100;
-var cloudH = 100;
-//var clouudSize = 100;
-
 // sun
 var sunX = 100;
 var sunY = 100;
@@ -25,8 +18,7 @@ var sunW = 100;
 var sunH = 100;
 //var sunSize = 100;
 
-
-// global variables
+// chapters
 var chapter = "morning"; // day, night
 var whichFruit;
 
