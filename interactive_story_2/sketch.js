@@ -7,10 +7,10 @@
 
 
 // global Variables
-var X = 200; // main X postion
-var Y = 200; // main Y postion
-var W = 200; // main Width
-var H = 200; // main Height
+var x = 200; // main x postion
+var y = 200; // main y postion
+var w = 200; // main width
+var h = 200; // main height
 
 // clouds
 var cloudX = 100;
@@ -49,7 +49,7 @@ function draw() {
         // Grass
         noStroke();
         fill("lightgreen");  // grass color
-        rect(X - 200, Y + 280, windowWidth, windowHeight);
+        rect(x - 200, y + 280, windowWidth, windowHeight);
         
 		abel(100, 200, 200);  // first character
 		joel(200, 100, 200); // second character
@@ -65,7 +65,7 @@ function draw() {
         // Grass
         noStroke();
         fill("lightgreen");  // grass color
-        rect(X - 200, Y + 280, windowWidth, windowHeight);
+        rect(x - 200, y + 280, windowWidth, windowHeight);
         
 		abel(300, 150, 200);  
 		joel(400, 75, 200);
@@ -82,7 +82,7 @@ function draw() {
             // Grass
         noStroke();
         fill("lightgreen");  // grass color
-        rect(X - 200, Y + 280, windowWidth, windowHeight);
+        rect(x - 200, y + 280, windowWidth, windowHeight);
             
 			abel(600, 100, 200);
 			narrative("Abel is Stuff.", "Click anywhere to start over.");
@@ -137,10 +137,10 @@ function abel(x, s, o) {
     fill(255);  // outter eye colors
     
     // Character 2 
-    ellipse(X + 370, Y + 100, W - 170,  H -170);  // outter left eye
+    ellipse(x + 370, y + 100, w - 170,  h -170);  // outter left eye
     
     // Characater 2 
-    ellipse(X + 430, Y + 100, W - 170, H - 170);  // outter right eye
+    ellipse(x + 430, y + 100, w - 170, h - 170);  // outter right eye
     
     
     //Character 2 
@@ -148,16 +148,16 @@ function abel(x, s, o) {
     fill(30);  // eye colors
     
     // Character 2 
-    ellipse(X + 370, Y + 100, W - 180, H - 180);  // left eye
+    ellipse(x + 370, y + 100, w - 180, h - 180);  // left eye
     
     // Characater 2 
-    ellipse(X + 430, Y + 100, W - 180, H - 180);  // right eye
+    ellipse(x + 430, y + 100, w - 180, h - 180);  // right eye
     
     //character 2
-    arc(X + 395, Y + 145, W + 50, H - 150, 100, PI + HALF_PI, PIE);  // top wings 
+    arc(x + 395, y + 145, w + 50, h - 150, 100, PI + HALF_PI, PIE);  // top wings 
     
     //character 2
-    arc(X + 395, Y + 175, W + 50, H - 150, 100, PI + HALF_PI, PIE);  // bottom wings
+    arc(x + 395, y + 175, w + 50, h - 150, 100, PI + HALF_PI, PIE);  // bottom wings
     
     
     //Character 2
@@ -165,10 +165,10 @@ function abel(x, s, o) {
     fill(255, 255, 51);
     
     // Character 2 
-    ellipse(X + 400, Y + 100, W - 140, H - 150);  // head
+    ellipse(x + 400, y + 100, w - 140, h - 150);  // head
     
     // Characater 2  
-    ellipse(X + 400, Y + 175, W - 100, H - 50);  // top Body
+    ellipse(x + 400, y + 175, w - 100, h - 50);  // top Body
     
     
     
@@ -177,10 +177,10 @@ function abel(x, s, o) {
     fill(0);
     
     // Character 2 
-    ellipse(X + 400, Y + 100, W - 150, H - 160); // head
+    ellipse(x + 400, y + 100, w - 150, h - 160); // head
     
     // Characater 2  
-    ellipse(X + 400, Y + 175, W - 110, H - 60); // top Body
+    ellipse(x + 400, y + 175, w - 110, h - 60); // top Body
     
     
     
@@ -189,10 +189,10 @@ function abel(x, s, o) {
     fill(255, 255, 51); // layer 2
     
     // Character 2 
-    ellipse(X + 400, Y + 100, W - 160, H - 170); // head
+    ellipse(x + 400, y + 100, w - 160, h - 170); // head
     
     // Characater 2  
-    ellipse(X + 400, Y + 175, W - 120, H - 70); // top Body
+    ellipse(x + 400, y + 175, w - 120, h - 70); // top Body
     
     
     
@@ -201,10 +201,10 @@ function abel(x, s, o) {
     fill(0);  // layer 3
     
     // Character 2 
-    ellipse(X + 400, Y + 100, W - 150, H - 160); // head
+    ellipse(x + 400, y + 100, w - 150, h - 160); // head
     
     // Characater 2 
-    ellipse(X + 400, Y + 175, W - 130, H - 80);  // top Body
+    ellipse(x + 400, y + 175, w - 130, h - 80);  // top Body
     
     
     //Character 2 
@@ -212,7 +212,7 @@ function abel(x, s, o) {
     fill(255);  // mouth color
     
     //character 2
-    arc(X + 400, Y + 110, W - 180, H - 180, 100, PI + QUARTER_PI, PIE);  // mouth
+    arc(x + 400, y + 110, w - 180, h - 180, 100, PI + QUARTER_PI, PIE);  // mouth
     
     // end of character 2
 
@@ -225,10 +225,10 @@ function joel(x, s, o) {
     fill(255);  // eye colors
     
     // Characater 1 
-    ellipse(X - 15, Y + 75, W - 180, H - 180);  // Outter left eye
+    ellipse(x - 15, y + 75, w - 180, h - 180);  // Outter left eye
     
     // Characater 1 
-    ellipse(X + 15, Y + 75, W - 180, H - 180);  // Outter right eye
+    ellipse(x + 15, y + 75, w - 180, h - 180);  // Outter right eye
     
     
     
@@ -237,10 +237,10 @@ function joel(x, s, o) {
     fill(0);  // eye colors
     
     // Characater 1 
-    ellipse(X - 15, Y + 75, W - 190, H - 190);  // left eye
+    ellipse(x - 15, y + 75, w - 190, h - 190);  // left eye
     
     // Characater 1 
-    ellipse(X + 15, Y + 75, W - 190, H - 190);  // right eye
+    ellipse(x + 15, y + 75, w - 190, h - 190);  // right eye
     
     
     //Character 1 
@@ -248,10 +248,10 @@ function joel(x, s, o) {
     fill(190);  // wings color   
     
     //character 1
-    arc(X - 8, Y + 110, W + 100, H -180, 100, PI + HALF_PI, PIE);  // top wings  
+    arc(x - 8, y + 110, w + 100, h -180, 100, PI + HALF_PI, PIE);  // top wings  
     
     //character 1
-    arc(X - 8, Y + 140, W + 100, H - 180, 100, PI + HALF_PI, PIE);  // bottom wings
+    arc(x - 8, y + 140, w + 100, h - 180, 100, PI + HALF_PI, PIE);  // bottom wings
     
     
     
@@ -260,10 +260,10 @@ function joel(x, s, o) {
     fill(102, 178, 255);  // head and body color
     
     // Characater 1 
-    ellipse(X, Y + 75, W - 185, H - 170);  // head
+    ellipse(x, y + 75, w - 185, h - 170);  // head
     
     // Characater 1 
-    ellipse(X, Y + 175, W - 180, H);  // Body
+    ellipse(x, y + 175, w - 180, h);  // Body
     
     
     
@@ -271,7 +271,7 @@ function joel(x, s, o) {
     fill(255);
     
     //character 1
-    arc(X, Y + 110, W - 160, H - 160, 100, PI + QUARTER_PI, PIE);  // mouth
+    arc(x, y + 110, w - 160, h - 160, 100, PI + QUARTER_PI, PIE);  // mouth
     
     
     // end of character 1
