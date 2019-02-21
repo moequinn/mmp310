@@ -44,12 +44,12 @@ function draw() {
         
         
         
-        // Fence
+        // Fence 1
         noStroke();
         fill("brown");  // fence color
         rect(x - 200, y + 80, windowWidth, h - 170);
         
-        // Fence
+        // Fence 2
         noStroke();
         fill("brown");  // fence color
         rect(x - 200, y + 180, windowWidth, h - 150);
