@@ -13,13 +13,17 @@ function setup() {
 	for (let x = 0; x < width; x += 300) {
 		
         fill('lightgreen');
-		ellipse(x, 250, 100); // lower body
+		ellipse(x, 290, 100); // lower body
         
         fill('darkgreen');
-		ellipse(x, 200, 100); // upper body
+		ellipse(x, 200, 150); // upper body
         
         fill('lightgreen');
 		ellipse(x, 100, 180); // face
+        
+        
+        
+        
         
         
         
@@ -50,9 +54,11 @@ function setup() {
         
 		fill(c);
 		var s = map(i, 0, 4, 10, 200); // map size
-		var y = map(i, 0, 5, 800, 400);
+		var y = map(i, 0, 4, 400, 600);
 		ellipse(x, y, s);
 		x += width/5;
+        
+        rect(x, y, s, 90, 100);
         
         
         
