@@ -11,6 +11,136 @@ var y = 200; // main y postion
 var w = 200; // main width
 var h = 200; // main height
 
+// Joel
+var joelOffset = 200; // offset
+
+// Joel Head
+//var joelHeadX = joelOffset; // joel x postion
+var joelHeadY = joelOffset + 75; // joel y postion 
+var joelHeadW = joelOffset - 185; // joel width
+var joelHeadH = joelOffset - 170; // joel height
+
+// Joel Body
+//var joelBodyX = joelOffset + ;  // joel x position
+var joelBodyY = joelOffset + 175; // joel y position
+var joelBodyW = joelOffset - 180; // joel width
+var joelBodyH = joelOffset + 0;   // joel height
+
+// Joel top wings
+//var joelTopWingsX = joelOffset +; // joel x position
+var joelTopWingsY = joelOffset + 140;   // joel y position
+var joelTopWingsW = joelOffset + 100;   // joel width
+var joelTopWingsH = joelOffset - 180;   // joel height
+
+// Joel bottom wings
+//var joelBottomWingX = joelOffset +;  // joel x position
+var joelBottomWingY = joelOffset + 170;  // joel y position
+var joelBottomWingW = joelOffset + 100;  // joel width
+var joelBottomWingH = joelOffset - 180;  // joel hieght
+
+// Joel Outter eyes
+//var joelOutterEyeX = joelOffset +;  // joel x position
+var joelOutterEyeY = joelOffset + 75;  // joel y position
+var joelOutterEyeW = joelOffset - 180;  // joel width
+var joelOutterEyeH = joelOffset - 180;  // joel hieght
+
+// Joel eye pupils
+//var joelPupilX = joelOffset +;  // joel x position
+var joelPupilY = joelOffset + 75;  // joel y position
+var joelPupilW = joelOffset - 190;  // joel width
+var joelPupilH = joelOffset - 190;  // joel hieght
+
+// Joel mouth
+//var joelMouthX = joelOffset +;  // joel x position
+var joelMouthY = joelOffset + 110;  // joel y position
+var joelMouthW = joelOffset - 160;  // joel width
+var joelMouthH = joelOffset - 160;  // joel hieght
+
+   
+// Abel
+
+var abelOffset = 200;
+
+// Abel Head Main
+//var abelHeadMainX = joelOffset; // joel x postion
+var abelHeadMainY = joelOffset + 100; // joel y postion 
+var abelHeadMainW = joelOffset - 140; // joel width
+var abelHeadMainH = joelOffset - 150; // joel height
+
+// Abel Head Layer1
+//var abelHeadLayer1X = joelOffset; // joel x postion
+var abelHeadLayer1Y = joelOffset + 100; // joel y postion 
+var abelHeadLayer1W = joelOffset - 150; // joel width
+var abelHeadLayer1H = joelOffset - 160; // joel height
+
+// Abel Head Layer2
+//var abelHeadLayer2X = joelOffset; // joel x postion
+var abelHeadLayer2Y = joelOffset + 100; // joel y postion 
+var abelHeadLayer2W = joelOffset - 160; // joel width
+var abelHeadLayer2H = joelOffset - 170; // joel height
+
+// Abel Head Layer3
+//var abelHeadX = joelOffset; // joel x postion
+var abelHeadLayer3Y = joelOffset + 100; // joel y postion 
+var abelHeadLayer3W = joelOffset - 150; // joel width
+var abelHeadLayer3H = joelOffset - 160; // joel height
+
+// Abeel Body main
+//var abelBodyMainX = joelOffset + ;  // joel x position
+var abelBodyMianY = joelOffset + 175; // joel y position
+var abelBodyMainW = joelOffset - 100; // joel width
+var abelBodyMainH = joelOffset - 50;   // joel height
+
+// Abeel Body Layer 1
+//var abelBodyLayer1X = joelOffset + ;  // joel x position
+var abelBodyLayer1Y = joelOffset + 175; // joel y position
+var abelBodyLayer1W = joelOffset - 110; // joel width
+var abelBodyLayer1H = joelOffset - 60;   // joel height
+
+// Abeel Body Layer 2
+//var abelBodyLayer2X = joelOffset + ;  // joel x position
+var abelBodyLayer2Y = joelOffset + 175; // joel y position
+var abelBodyLayer2W = joelOffset - 120; // joel width
+var abelBodyLayer2H = joelOffset - 70;   // joel height
+
+// Abeel Body Layer 3
+//var abelBodyLayer3X = joelOffset + ;  // joel x position
+var abelBodyLayer3Y = joelOffset + 175; // joel y position
+var abelBodyLayer3W = joelOffset - 130; // joel width
+var abelBodyLayer3H = joelOffset - 80;   // joel height
+
+// Abel top wings
+//var abelTopWingsX = joelOffset +; // joel x position
+var abelTopWingsY = joelOffset + 145;   // joel y position
+var abelTopWingsW = joelOffset + 50;   // joel width
+var abelTopWingsH = joelOffset - 150;   // joel height
+
+// Abel bottom wings
+//var abelBottomWingX = joelOffset +;  // joel x position
+var abelBottomWingY = joelOffset + 175;  // joel y position
+var abelBottomWingW = joelOffset + 50;  // joel width
+var abelBottomWingH = joelOffset - 150;  // joel hieght
+
+// Abel Outter eyes
+//var abelOutterEyeX = joelOffset +;  // joel x position
+var abelOutterEyeY = joelOffset + 100;  // joel y position
+var abelOutterEyeW = joelOffset - 170;  // joel width
+var abelOutterEyeH = joelOffset - 170;  // joel hieght
+
+// Abel eye pupils
+//var abelPupilX = joelOffset +;  // joel x position
+var abelPupilY = joelOffset + 100;  // joel y position
+var abelPupilW = joelOffset - 180;  // joel width
+var abelPupilH = joelOffset - 180;  // joel hieght
+
+// Abel mouth
+//var abelMouthX = joelOffset +;  // joel x position
+var abelMouthY = joelOffset + 110;  // joel y position
+var abelMouthW = joelOffset - 180;  // joel width
+var abelMouthH = joelOffset - 180;  // joel hieght
+
+
+
 // clouds
 var cloudX = 100;
 var cloudY = 100;
@@ -362,10 +492,10 @@ function abel(x, s, o) {
     fill(30);  // eye colors
     
     // Character 2 
-    ellipse(x + 370, y + 100, w - 180, h - 180);  // left eye
+    ellipse(x + 370, y + 100, w - 180, h - 180);  // left pupil
     
     // Characater 2 
-    ellipse(x + 430, y + 100, w - 180, h - 180);  // right eye
+    ellipse(x + 430, y + 100, w - 180, h - 180);  // right pupil
     
     //character 2
     arc(x + 395, y + 145, w + 50, h - 150, 100, PI + HALF_PI, PIE);  // top wings 
@@ -374,7 +504,7 @@ function abel(x, s, o) {
     arc(x + 395, y + 175, w + 50, h - 150, 100, PI + HALF_PI, PIE);  // bottom wings
     
     
-    //Character 2
+    //Character 2 Main
     noStroke();
     fill(255, 255, 51);
     
@@ -382,11 +512,11 @@ function abel(x, s, o) {
     ellipse(x + 400, y + 100, w - 140, h - 150);  // head
     
     // Characater 2  
-    ellipse(x + 400, y + 175, o - 100, h - 50);  // top Body
+    ellipse(x + 400, y + 175, o - 100, h - 50);  // Body
     
     
     
-    //Character 2
+    //Character 2 layer 1
     noStroke();
     fill(0);
     
@@ -394,7 +524,7 @@ function abel(x, s, o) {
     ellipse(x + 400, y + 100, w - 150, h - 160); // head
     
     // Characater 2  
-    ellipse(x + 400, y + 175, o - 110, h - 60); // top Body
+    ellipse(x + 400, y + 175, o - 110, h - 60); // Body
     
     
     
@@ -406,7 +536,7 @@ function abel(x, s, o) {
     ellipse(x + 400, y + 100, w - 160, h - 170); // head
     
     // Characater 2  
-    ellipse(x + 400, y + 175, o - 120, h - 70); // top Body
+    ellipse(x + 400, y + 175, o - 120, h - 70); // Body
     
     
     
@@ -418,7 +548,7 @@ function abel(x, s, o) {
     ellipse(x + 400, y + 100, w - 150, h - 160); // head
     
     // Characater 2 
-    ellipse(x + 400, y + 175, o - 130, h - 80);  // top Body
+    ellipse(x + 400, y + 175, o - 130, h - 80);  // Body
     
     
     //Character 2 
@@ -451,10 +581,10 @@ function joel(x, s, o) {
     fill(0);  // eye colors
     
     // Characater 1 
-    ellipse(x - 15, y + 75, w - 190, h - 190);  // left eye
+    ellipse(x - 15, y + 75, w - 190, h - 190);  // left pupil
     
     // Characater 1 
-    ellipse(x + 15, y + 75, w - 190, h - 190);  // right eye
+    ellipse(x + 15, y + 75, w - 190, h - 190);  // right pupil
     
     
     //Character 1 
