@@ -22,12 +22,7 @@ function setup() {
 		ellipse(x, 100, 180); // face
         
         
-        
-        
-        
-        
-        
-        
+            
         fill('black');
 		rect(x, 150, 100, 60, 50);// mouth
         
@@ -54,7 +49,7 @@ function setup() {
         
 		fill(c);
 		var s = map(i, 0, 4, 10, 200); // map size
-		var y = map(i, 0, 4, 400, 600);
+		var y = map(i, 0, 4, 600, 400);
 		ellipse(x, y, s);
 		x += width/5;
         
