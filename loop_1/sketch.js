@@ -1,11 +1,11 @@
 /*
-	mmp 310 week 5 (02/20/2019)
-	loop 2 example
+	mmp 310 week 4 and 5 (02/20/2019)
+	loop 1 and 2 example
 */
     
     function setup() {
 	createCanvas(windowWidth, windowHeight);
-	background(51);
+	background(71);
 	rectMode(CENTER);
 	noStroke();
 	textAlign(100);
