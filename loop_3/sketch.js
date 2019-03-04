@@ -5,7 +5,7 @@
     
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-	background(51);
+	background(random(91));
 	textSize(50);
 	
 	var columns = 12;
@@ -16,37 +16,38 @@ function setup() {
 	for (let x = 0; x <= width; x += w) {
 		for (let y = 0; y <= height; y += h) {
 			
-			fill('#7F725B');
-			noStroke();
-			ellipse(x, y, w/2);
-			
-			noFill();
-			strokeWeight(4);
-			stroke('#FFBD4C');
-			
-			// triangle(x1, y1, x2, y2, x3, y3);
-			var r = random(w);
-			//triangle(x + random(12), y + r, x, y, x + r, y);
-            triangle(x + random(12), y + r, x, y, x + r, y);
-			
-			// line(x1, y1, x2, y2);
-			
-			stroke('#7F5000');
-			line(x + w/4, y + random(20), x - w/4, y);
+            fill(random(255), 0, random(255));
+            
+                ellipse(x, y, w / 2);
+
+                noFill();
+                strokeWeight(4);
+                stroke('#70FFC1');
+                var r = random(w);
+                var offset = 10;
+
+                ellipse(x - offset, y, w / 4);
+                ellipse(x + offset, y, w / 4);
 		
 			var choice = random(2);
 			if (choice > 1) {
 				
-				var _r = random(0, 110, x);
-				var _g = random(0, 30, y);
+				var _r = random(255, x);
+				var _g = random(255, y);
 				var _b = random(255);
+                
 				fill(_r, _g, _b);
-				rect(x, y, w / 4, h);
+                ellipse(x, y / 4, w / 2);
+                ellipse(x, y / 2, w / 2);
+                
 			} else {
-				stroke('#CC8000');
-				line(x - w/2, y - h/2, x + w/2, y + h/2);
+                
+				stroke('#CC4689');
+                ellipse(x - offset, y, w/8);
+                ellipse(x + offset, y, w/4);
+                ellipse(x, y, w/2);
+                
 			}
-		
 		}
 	}
 }
