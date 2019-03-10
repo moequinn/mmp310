@@ -16,31 +16,32 @@ function setup() {
     for(let x = 0; x <= width; x += w) {
         for(let y = 0; y <= height; y += h) {
             
-            /*var r = map(y, 0, width, 0, PI);
-			push();
-			translate(x + w/2, y + h/2);
-			rotate(r); 
-			
-			fill(255);
-			arc(0, 0, w, w, 0, PI * 1.5, CHORD);
-			pop(); */
-            
-            // line(x1, y1, x2, y2);
-            stroke(10, 100, 30);
+            stroke(random(10, 100, 30));
             strokeWeight(2);
             
-            line(x + w, y, x, y + h);
             var r = random(3);
             if (r > 2) {
-				line(x - w, y, x + w, y - h);
-                line(x + w, y, x - w, y + h);
+                
+                var _r = random(0, 255, x);
+				var _g = random(60, 255, y);
+				var _b = random(100, 255);
+                
+                // square pattern
+				fill(_r, _g, _b);
+                rect(x, y, w, h);
+                
 			} else if (r > 1) {
-                stroke(255);
-				line(x, y, x + w, y + h);
-                line(x + w, y, w, y + h);
+                
+                stroke(random(0, 255, 0));
+                rect(x, y, w, h);
+                ellipse(x, y, w / 2, h / 2);
+                
 			} else {
-				line(x + w, y, x, y - h);
-                line(x + w, y, x, y - h);
+                
+                fill(random(255));
+                rect(x, y, w, h);
+                rect(x, y, w / 2, h / 2);
+                
 			}
 			
 		}
