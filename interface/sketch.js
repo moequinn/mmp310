@@ -33,6 +33,9 @@ function setup() {
 	columnSlider.input(setColumn);
 	
 	// rows 
+    createDiv("Number of Rows");
+	var rowSlider = createSlider(2, 100, rows);
+	rowSlider.input(setRow);
 	
 	// bg color
 	createDiv("Background Color");
@@ -44,6 +47,11 @@ function setup() {
 
 function setColumn() {
 	columns = this.value();
+	pattern();
+}
+
+function setRow() {
+	rows = this.value();
 	pattern();
 }
 
