@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	overflow: hidden;
     text-align: center;
+    background-color: lightcyan;
 }
 
 button {
