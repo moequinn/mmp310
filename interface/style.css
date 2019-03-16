@@ -2,6 +2,7 @@
 body {
 	margin: 0;
 	overflow: hidden;
+    text-align: center;
 }
 
 button {
@@ -26,4 +27,3 @@ input[type="range"] {
 	zoom: 2;
 }
 
-`
