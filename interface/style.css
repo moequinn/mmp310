@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Hanalei+Fill');
+/*@import url('https://fonts.googleapis.com/css?family=Hanalei+Fill');*/
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
 body {
 	margin: 0;
 	overflow: hidden;
@@ -6,7 +9,7 @@ body {
 }
 
 button {
-	font-family: "Hanalei Fill", sans-serif;
+	font-family: 'Inconsolata', monospace;
 	font-size: 1.5em;
 	background-color: lightblue;
 	color: white;
@@ -15,12 +18,12 @@ button {
 }
 
 .interface {
-	color: purple;
+	color: #002399;
 }
 
 div {
 	font-size: 2em;
-	font-family: monospace;
+	font-family: 'Inconsolata', monospace;
 }
 
 input[type="range"] {
