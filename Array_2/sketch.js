@@ -17,8 +17,10 @@ function draw() {
 	for (let i = 0; i < points.length; i++) {
 		let x = points[i][0];
 		let y = points[i][1];
-		fill('plum');
-		ellipse(x, y, 20);
+		fill('pink');
+		ellipse(x, y, 10);
+        ellipse(x - 10, y, 10);
+        ellipse(x + 10, y, 10);
 		
 //		points[i][1]++; // increment the y value
 	}
@@ -30,7 +32,7 @@ function draw() {
 	for (let i = 0; i < points.length; i++) {
 		let x = points[i][0] - width/2;
 		let y = points[i][1] - height/2;
-		fill('gold');
+		fill('lightgreen');
 		rect(x, y, 30, 30);
 	}
 	
