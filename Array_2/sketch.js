@@ -21,8 +21,6 @@ function draw() {
 		ellipse(x, y, 10);
         ellipse(x - 10, y, 10);
         ellipse(x + 10, y, 10);
-		
-//		points[i][1]++; // increment the y value
 	}
 	
 	translate(width/2, height/2);
